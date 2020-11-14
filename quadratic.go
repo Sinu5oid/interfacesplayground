@@ -28,6 +28,7 @@ func (e QuadraticEquation) Solve() []complex128 {
 
 	if discriminant == 0 {
 		result = append(result, common)
+		return result
 	}
 
 	var discriminantPart complex128
