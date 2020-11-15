@@ -33,12 +33,10 @@ func (e QuadraticEquation) Solve() []complex128 {
 
 	var discriminantPart complex128
 	if discriminant > 0 {
-		discriminantPart = complex(math.Sqrt(discriminant), 0)
+		discriminantPart = complex(math.Sqrt(discriminant)/(2*e.a), 0)
 	} else {
-		discriminantPart = complex(math.Sqrt(-discriminant), 1)
+		discriminantPart = complex(0, math.Sqrt(-discriminant)/(2*e.a))
 	}
-
-	discriminantPart = discriminantPart / complex(2*e.a, 0)
 
 	result = append(result, common-discriminantPart)
 	result = append(result, common+discriminantPart)
